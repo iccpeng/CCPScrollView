@@ -1,12 +1,16 @@
 # CCPScrollView
 
-文字无限轮播,适用于广播消息的上下无限轮播展示。
+#### 文字无限轮播,适用于广播消息的上下无限轮播展示。
+
+#### 
 
 ### DEMO GIF：
 
 ![Image text]( https://github.com/IMCCP/CCPScrollView/blob/master/CCPScrollView/CCPScrollView/scrollView.gif)
 
 ### DEMO 描述：
+
+
 
 ### DEMO方法介绍：
 ```
@@ -89,8 +93,8 @@
     
     [ccpView clickTitleLabel:^(NSInteger index) {
         
-     self.showLabel.text = [NSString stringWithFormat:@"您点击了第%ld个Label",index - 100];
-        
+     NSLog(@"%ld",index);
+
     }];
     
     [self.view addSubview:ccpView];
