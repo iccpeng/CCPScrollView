@@ -38,7 +38,6 @@
     
     ccpView.BGColor = [UIColor purpleColor];
     
-    
     [ccpView clickTitleLabel:^(NSInteger index) {
         
         NSLog(@"%ld",index);
