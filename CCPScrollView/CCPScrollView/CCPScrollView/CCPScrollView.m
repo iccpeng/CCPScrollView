@@ -107,6 +107,14 @@
         
         UILabel *titleLabel = [[UILabel alloc] init];
         
+        titleLabel.userInteractionEnabled = YES;
+        
+        titleLabel.tag = 100 + i;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickTheLabel:)];
+        
+        [titleLabel addGestureRecognizer:tap];
+        
         titleLabel.textAlignment = NSTextAlignmentCenter;
         
         CGFloat labelY = i * labelH;
@@ -117,6 +125,24 @@
         [self.ccpScrollView addSubview:titleLabel];
     }
 }
+
+- (void)clickTheLabel:(UITapGestureRecognizer *)tap {
+    
+    if (self.clickLabelBlock) {
+        
+        self.clickLabelBlock(tap.view.tag);
+        
+    }
+}
+
+
+
+- (void) clickTitleLabel:(clickLabelBlock) clickLabelBlock {
+    
+    self.clickLabelBlock = clickLabelBlock;
+    
+}
+
 
 - (void)setIsCanScroll:(BOOL)isCanScroll {
     

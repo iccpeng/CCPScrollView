@@ -26,6 +26,12 @@
     ccpView.titleArray = [NSArray arrayWithObjects:@"IMCCP",@"a iOS developer",@"GitHub:https://github.com/IMCCP", nil];
     
     [self.testView addSubview:ccpView];
+    
+    [ccpView clickTitleLabel:^(NSInteger index) {
+        
+        NSLog(@"%ld",index);
+        
+    }];
 
 }
 

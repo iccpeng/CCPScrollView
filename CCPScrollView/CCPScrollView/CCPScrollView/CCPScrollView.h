@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^clickLabelBlock)(NSInteger index);
+
 @interface CCPScrollView : UIView
 
 /**
@@ -22,6 +24,10 @@
  *  是否可以拖拽
  */
 @property (nonatomic,assign) BOOL isCanScroll;
+/**
+ *  block回调
+ */
+@property (nonatomic,copy)void(^clickLabelBlock)(NSInteger index);
 
 /**
  *  关闭定时器
@@ -32,5 +38,11 @@
  *  添加定时器
  */
 - (void)addTimer;
+
+/**
+ *  label的点击事件
+ */
+
+- (void) clickTitleLabel:(clickLabelBlock) clickLabelBlock;
 
 @end
