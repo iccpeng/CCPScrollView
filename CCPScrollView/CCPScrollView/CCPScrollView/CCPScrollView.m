@@ -228,7 +228,6 @@
     [self addTimer];
 }
 
-
 - (void)addTimer{
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextLabel) userInfo:nil repeats:YES];

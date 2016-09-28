@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21CBC5CA1D9B8ADF007E5B6A /* CCPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CBC5C91D9B8ADF007E5B6A /* CCPScrollView.m */; };
+		21CBC5CC1D9BB318007E5B6A /* scrollView.gif in Resources */ = {isa = PBXBuildFile; fileRef = 21CBC5CB1D9BB318007E5B6A /* scrollView.gif */; };
 		7EC79B991D9AB2C30076A90C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79B981D9AB2C30076A90C /* main.m */; };
 		7EC79B9C1D9AB2C30076A90C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79B9B1D9AB2C30076A90C /* AppDelegate.m */; };
 		7EC79B9F1D9AB2C30076A90C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79B9E1D9AB2C30076A90C /* ViewController.m */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		21CBC5C81D9B8ADF007E5B6A /* CCPScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPScrollView.h; sourceTree = "<group>"; };
 		21CBC5C91D9B8ADF007E5B6A /* CCPScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPScrollView.m; sourceTree = "<group>"; };
+		21CBC5CB1D9BB318007E5B6A /* scrollView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = scrollView.gif; sourceTree = "<group>"; };
 		7EC79B941D9AB2C30076A90C /* CCPScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCPScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC79B981D9AB2C30076A90C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EC79B9A1D9AB2C30076A90C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		7EC79B961D9AB2C30076A90C /* CCPScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				21CBC5CB1D9BB318007E5B6A /* scrollView.gif */,
 				21CBC5C71D9B8ADF007E5B6A /* CCPScrollView */,
 				7EC79B9A1D9AB2C30076A90C /* AppDelegate.h */,
 				7EC79B9B1D9AB2C30076A90C /* AppDelegate.m */,
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CBC5CC1D9BB318007E5B6A /* scrollView.gif in Resources */,
 				7EC79BA71D9AB2C30076A90C /* LaunchScreen.storyboard in Resources */,
 				7EC79BA41D9AB2C30076A90C /* Assets.xcassets in Resources */,
 				7EC79BA21D9AB2C30076A90C /* Main.storyboard in Resources */,
