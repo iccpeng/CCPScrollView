@@ -9,7 +9,7 @@
 ![Image text]( https://github.com/IMCCP/CCPScrollView/blob/master/CCPScrollView/CCPScrollView/scrollView.gif)
 
 ### DEMO 描述：
-
+```
 通过使用 UILabel 与 UIScrollView 来实现轮播效果。
 
 实现的思路：如果需要展示5条数据，就在ScrollView上创建6个label,使得数据的显示顺序为5-1-2-3-4-5。首次显示1的位置，然后滑动，等滑动到最后一个
@@ -17,7 +17,7 @@
 label即数据为5时，无动画（一定是无动画效果）切换到第一个label的位置也就是第一个数据为5的位置，就可以实现文字的无限轮播滚动了。详细的实现过程可以查
 
 看DEMO。
-
+```
 ### DEMO方法介绍：
 ```
 /**
