@@ -22,6 +22,12 @@
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
 
+    /**
+     DEMO下载链接：https://github.com/IMCCP/CCPScrollView
+     
+     首先感谢您的 Star，如果在使用中您有任何问题，可以在 github issue,我会尽自己能力给您答复。
+     */
+    
     CCPScrollView *ccpView = [[CCPScrollView alloc] initWithFrame:CGRectMake(0, 0, self.testView.frame.size.width, self.testView.frame.size.height)];
     
     ccpView.titleArray = [NSArray arrayWithObjects:@"IMCCP",@"a iOS developer",@"GitHub:https://github.com/IMCCP", nil];
@@ -34,6 +40,8 @@
     
     
     [ccpView clickTitleLabel:^(NSInteger index) {
+        
+        NSLog(@"%ld",index);
         
         self.showLabel.text = [NSString stringWithFormat:@"您点击了第%ld个Label",index - 100];
         
