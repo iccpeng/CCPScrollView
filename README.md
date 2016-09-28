@@ -70,3 +70,29 @@
 
 - (void) clickTitleLabel:(clickLabelBlock) clickLabelBlock;
 ```
+
+### DEMO 使用示例
+
+```
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    CCPScrollView *ccpView = [[CCPScrollView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 44)];
+    
+    ccpView.titleArray = [NSArray arrayWithObjects:@"IMCCP",@"a iOS developer",@"GitHub:https://github.com/IMCCP", nil];
+    
+    ccpView.titleFont = 25;
+    
+    ccpView.titleColor = [UIColor greenColor];
+    
+    ccpView.BGColor = [UIColor purpleColor];
+    
+    [ccpView clickTitleLabel:^(NSInteger index) {
+        
+     self.showLabel.text = [NSString stringWithFormat:@"您点击了第%ld个Label",index - 100];
+        
+    }];
+    
+    [self.view addSubview:ccpView];
+}
+```
