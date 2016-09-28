@@ -28,4 +28,9 @@
  */
 - (void)removeTimer;
 
+/**
+ *  添加定时器
+ */
+- (void)addTimer;
+
 @end

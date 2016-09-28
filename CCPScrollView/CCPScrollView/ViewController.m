@@ -27,7 +27,6 @@
     
     [self.testView addSubview:ccpView];
 
-
 }
 
 - (void)didReceiveMemoryWarning {

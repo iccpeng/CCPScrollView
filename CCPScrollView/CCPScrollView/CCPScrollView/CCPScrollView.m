@@ -166,9 +166,7 @@
     [self addTimer];
 }
 
-/**
- *  开启定时器
- */
+
 - (void)addTimer{
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextLabel) userInfo:nil repeats:YES];

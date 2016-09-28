@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21CBC5CA1D9B8ADF007E5B6A /* CCPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CBC5C91D9B8ADF007E5B6A /* CCPScrollView.m */; };
 		7EC79B991D9AB2C30076A90C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79B981D9AB2C30076A90C /* main.m */; };
 		7EC79B9C1D9AB2C30076A90C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79B9B1D9AB2C30076A90C /* AppDelegate.m */; };
 		7EC79B9F1D9AB2C30076A90C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79B9E1D9AB2C30076A90C /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		7EC79BA71D9AB2C30076A90C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC79BA51D9AB2C30076A90C /* LaunchScreen.storyboard */; };
 		7EC79BB21D9AB2C40076A90C /* CCPScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79BB11D9AB2C40076A90C /* CCPScrollViewTests.m */; };
 		7EC79BBD1D9AB2C40076A90C /* CCPScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79BBC1D9AB2C40076A90C /* CCPScrollViewUITests.m */; };
-		7EC79BCC1D9AB2DB0076A90C /* CCPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC79BCB1D9AB2DB0076A90C /* CCPScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21CBC5C81D9B8ADF007E5B6A /* CCPScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPScrollView.h; sourceTree = "<group>"; };
+		21CBC5C91D9B8ADF007E5B6A /* CCPScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPScrollView.m; sourceTree = "<group>"; };
 		7EC79B941D9AB2C30076A90C /* CCPScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCPScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC79B981D9AB2C30076A90C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EC79B9A1D9AB2C30076A90C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		7EC79BB81D9AB2C40076A90C /* CCPScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCPScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC79BBC1D9AB2C40076A90C /* CCPScrollViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCPScrollViewUITests.m; sourceTree = "<group>"; };
 		7EC79BBE1D9AB2C40076A90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EC79BCA1D9AB2DB0076A90C /* CCPScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPScrollView.h; sourceTree = "<group>"; };
-		7EC79BCB1D9AB2DB0076A90C /* CCPScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21CBC5C71D9B8ADF007E5B6A /* CCPScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				21CBC5C81D9B8ADF007E5B6A /* CCPScrollView.h */,
+				21CBC5C91D9B8ADF007E5B6A /* CCPScrollView.m */,
+			);
+			path = CCPScrollView;
+			sourceTree = "<group>";
+		};
 		7EC79B8B1D9AB2C30076A90C = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +113,9 @@
 		7EC79B961D9AB2C30076A90C /* CCPScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				21CBC5C71D9B8ADF007E5B6A /* CCPScrollView */,
 				7EC79B9A1D9AB2C30076A90C /* AppDelegate.h */,
 				7EC79B9B1D9AB2C30076A90C /* AppDelegate.m */,
-				7EC79BCA1D9AB2DB0076A90C /* CCPScrollView.h */,
-				7EC79BCB1D9AB2DB0076A90C /* CCPScrollView.m */,
 				7EC79B9D1D9AB2C30076A90C /* ViewController.h */,
 				7EC79B9E1D9AB2C30076A90C /* ViewController.m */,
 				7EC79BA01D9AB2C30076A90C /* Main.storyboard */,
@@ -280,7 +288,7 @@
 			files = (
 				7EC79B9F1D9AB2C30076A90C /* ViewController.m in Sources */,
 				7EC79B9C1D9AB2C30076A90C /* AppDelegate.m in Sources */,
-				7EC79BCC1D9AB2DB0076A90C /* CCPScrollView.m in Sources */,
+				21CBC5CA1D9B8ADF007E5B6A /* CCPScrollView.m in Sources */,
 				7EC79B991D9AB2C30076A90C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +515,7 @@
 				7EC79BC31D9AB2C40076A90C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EC79BC41D9AB2C40076A90C /* Build configuration list for PBXNativeTarget "CCPScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				7EC79BC61D9AB2C40076A90C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EC79BC71D9AB2C40076A90C /* Build configuration list for PBXNativeTarget "CCPScrollViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				7EC79BC91D9AB2C40076A90C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
