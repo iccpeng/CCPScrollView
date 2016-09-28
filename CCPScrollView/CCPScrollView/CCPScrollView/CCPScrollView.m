@@ -84,7 +84,6 @@
     
     id lastObj = [titleArray lastObject];
     
-    
     NSMutableArray *objArray = [[NSMutableArray alloc] init];
     
     [objArray addObject:lastObj];
@@ -102,6 +101,13 @@
     CGFloat labelH = self.ccpScrollView.frame.size.height;
     self.labelH = labelH;
     CGFloat labelX = 0;
+    
+    //防止重复赋值数据叠加
+    for (id label in self.ccpScrollView.subviews) {
+        
+        [label removeFromSuperview];
+        
+    }
     
     for (int i = 0; i < objArray.count; i++) {
         
@@ -135,14 +141,11 @@
     }
 }
 
-
-
 - (void) clickTitleLabel:(clickLabelBlock) clickLabelBlock {
     
     self.clickLabelBlock = clickLabelBlock;
     
 }
-
 
 - (void)setIsCanScroll:(BOOL)isCanScroll {
     
@@ -156,6 +159,39 @@
         
     }
 }
+
+- (void)setTitleColor:(UIColor *)titleColor {
+    
+    _titleColor = titleColor;
+    
+    for (UILabel *label in self.ccpScrollView.subviews) {
+        
+        label.textColor = titleColor;
+        
+    }
+}
+
+- (void)setTitleFont:(CGFloat )titleFont {
+    
+    _titleFont = titleFont;
+    
+    for (UILabel *label in self.ccpScrollView.subviews) {
+        
+        label.font = [UIFont systemFontOfSize: titleFont];;
+        
+    }
+    
+}
+
+- (void)setBGColor:(UIColor *)BGColor {
+    
+    _BGColor = BGColor;
+    
+    self.backgroundColor = BGColor;
+    
+}
+
+
 
 - (void)nextLabel {
     self.page ++;

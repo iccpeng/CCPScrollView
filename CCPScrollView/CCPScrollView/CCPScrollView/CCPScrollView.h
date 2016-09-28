@@ -28,6 +28,18 @@ typedef void(^clickLabelBlock)(NSInteger index);
  *  block回调
  */
 @property (nonatomic,copy)void(^clickLabelBlock)(NSInteger index);
+/**
+ *  字体颜色
+ */
+@property (nonatomic,strong) UIColor *titleColor;
+/**
+ *  背景颜色
+ */
+@property (nonatomic,strong) UIColor *BGColor;
+/**
+ *  字体大小
+ */
+@property (nonatomic,assign) CGFloat titleFont;
 
 /**
  *  关闭定时器

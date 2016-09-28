@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *testView;
+@property (weak, nonatomic) IBOutlet UILabel *showLabel;
 
 @end
 
@@ -25,19 +26,20 @@
     
     ccpView.titleArray = [NSArray arrayWithObjects:@"IMCCP",@"a iOS developer",@"GitHub:https://github.com/IMCCP", nil];
     
-    [self.testView addSubview:ccpView];
+    ccpView.titleFont = 25;
+    
+    ccpView.titleColor = [UIColor greenColor];
+    
+    ccpView.BGColor = [UIColor purpleColor];
+    
     
     [ccpView clickTitleLabel:^(NSInteger index) {
         
-        NSLog(@"%ld",index);
+        self.showLabel.text = [NSString stringWithFormat:@"您点击了第%ld个Label",index - 100];
         
     }];
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [self.testView addSubview:ccpView];
 }
 
 @end
