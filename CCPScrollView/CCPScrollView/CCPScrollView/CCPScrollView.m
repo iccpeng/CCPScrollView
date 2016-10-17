@@ -42,6 +42,7 @@
         _ccpScrollView.showsHorizontalScrollIndicator = NO;
         _ccpScrollView.showsVerticalScrollIndicator = NO;
         _ccpScrollView.scrollEnabled = NO;
+        _ccpScrollView.pagingEnabled = YES;
         [self addSubview:_ccpScrollView];
         
         [_ccpScrollView setContentOffset:CGPointMake(0 , self.labelH) animated:YES];
@@ -136,7 +137,7 @@
     
     if (self.clickLabelBlock) {
         
-        self.clickLabelBlock(tap.view.tag);
+        self.clickLabelBlock(tap.view.tag,self.titleNewArray[tap.view.tag - 100]);
         
     }
 }
@@ -191,31 +192,47 @@
     
 }
 
-
-
 - (void)nextLabel {
-    self.page ++;
     
-    if (self.page == self.titleNewArray.count) {
+    CGPoint oldPoint = self.ccpScrollView.contentOffset;
+    oldPoint.y += self.ccpScrollView.frame.size.height;
+    [self.ccpScrollView setContentOffset:oldPoint animated:YES];
+    
+}
+//当图片滚动时调用scrollView的代理方法
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (self.ccpScrollView.contentOffset.y == self.ccpScrollView.frame.size.height*(self.titleArray.count )) {
         
         [self.ccpScrollView setContentOffset:CGPointMake(0, 0) animated:NO];
         
-        self.page = 1;
-        
     }
-    //  滚动scrollview
-    CGFloat x = self.page  * self.ccpScrollView.frame.size.height;
-    
-    [self.ccpScrollView setContentOffset:CGPointMake(0, x) animated:YES];
     
 }
 
-// scrollview滚动的时候调用
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    self.page = scrollView.contentOffset.y / self.labelH;
-    
-}
+//- (void)nextLabel {
+//    self.page ++;
+//    
+//    if (self.page == self.titleNewArray.count) {
+//        
+//        [self.ccpScrollView setContentOffset:CGPointMake(0, 0) animated:NO];
+//        
+//        self.page = 1;
+//        
+//    }
+//    //  滚动scrollview
+//    CGFloat x = self.page  * self.ccpScrollView.frame.size.height;
+//    
+//    [self.ccpScrollView setContentOffset:CGPointMake(0, x) animated:YES];
+//    
+//}
+//
+//// scrollview滚动的时候调用
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    
+//    self.page = scrollView.contentOffset.y / self.labelH;
+//    
+//}
 
 // 开始拖拽的时候调用
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -230,7 +247,7 @@
 
 - (void)addTimer{
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextLabel) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextLabel) userInfo:nil repeats:YES];
 }
 
 - (void)removeTimer {

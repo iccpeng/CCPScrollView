@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,41 +19,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLF-Wx-bfC">
-                                <rect key="frame" x="0.0" y="262" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notice" translatesAutoresizingMaskIntoConstraints="NO" id="3wg-sH-uUK">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="ZYr-99-GFP"/>
+                                            <constraint firstAttribute="height" constant="44" id="hOb-Uw-e11"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8Qy-01-ADB"/>
+                                    <constraint firstItem="3wg-sH-uUK" firstAttribute="top" secondItem="XLF-Wx-bfC" secondAttribute="top" id="byl-KW-tca"/>
+                                    <constraint firstAttribute="bottom" secondItem="3wg-sH-uUK" secondAttribute="bottom" id="kvn-Bq-rd9"/>
+                                    <constraint firstItem="3wg-sH-uUK" firstAttribute="leading" secondItem="XLF-Wx-bfC" secondAttribute="leading" constant="15" id="tgj-PU-eBP"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="show message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G4-Vo-wzj">
-                                <rect key="frame" x="0.0" y="187" width="320" height="30"/>
-                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XLF-Wx-bfC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2ZZ-po-hJT"/>
-                            <constraint firstItem="XLF-Wx-bfC" firstAttribute="top" secondItem="8G4-Vo-wzj" secondAttribute="bottom" constant="45" id="Mtv-N4-jFk"/>
                             <constraint firstItem="XLF-Wx-bfC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UHA-WB-F0u"/>
                             <constraint firstItem="XLF-Wx-bfC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="byd-nU-zai"/>
-                            <constraint firstItem="8G4-Vo-wzj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dvw-B3-cc5"/>
-                            <constraint firstAttribute="trailing" secondItem="8G4-Vo-wzj" secondAttribute="trailing" id="fOM-WR-cGn"/>
                             <constraint firstAttribute="trailing" secondItem="XLF-Wx-bfC" secondAttribute="trailing" id="iGm-uc-goj"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="showLabel" destination="8G4-Vo-wzj" id="MAw-gX-Lsy"/>
                         <outlet property="testView" destination="XLF-Wx-bfC" id="GS2-4q-D64"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="305"/>
+            <point key="canvasLocation" x="192" y="161.91904047976013"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="notice" width="14" height="14"/>
+    </resources>
 </document>

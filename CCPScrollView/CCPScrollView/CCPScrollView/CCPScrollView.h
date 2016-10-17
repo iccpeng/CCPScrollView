@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^clickLabelBlock)(NSInteger index);
+typedef void(^clickLabelBlock)(NSInteger index,NSString *titleString);
 
 @interface CCPScrollView : UIView
 
@@ -27,7 +27,7 @@ typedef void(^clickLabelBlock)(NSInteger index);
 /**
  *  block回调
  */
-@property (nonatomic,copy)void(^clickLabelBlock)(NSInteger index);
+@property (nonatomic,copy)void(^clickLabelBlock)(NSInteger index,NSString *titleString);
 /**
  *  字体颜色
  */
