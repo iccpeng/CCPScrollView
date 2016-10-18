@@ -127,19 +127,31 @@
         CGFloat labelY = i * labelH;
         
         titleLabel.frame = CGRectMake(labelX, labelY, labelW, labelH);
+        
         titleLabel.text = objArray[i];
         
         [self.ccpScrollView addSubview:titleLabel];
+        
     }
+    
 }
 
 - (void)clickTheLabel:(UITapGestureRecognizer *)tap {
     
     if (self.clickLabelBlock) {
         
-        self.clickLabelBlock(tap.view.tag,self.titleNewArray[tap.view.tag - 100]);
+        NSInteger tag = tap.view.tag - 1;
+        
+        if (tag < 100) {
+            
+            tag = 100 + (self.titleArray.count - 1);
+            
+        }
+        
+        self.clickLabelBlock(tag,self.titleArray[tag - 100]);
         
     }
+    
 }
 
 - (void) clickTitleLabel:(clickLabelBlock) clickLabelBlock {
@@ -159,6 +171,7 @@
         self.ccpScrollView.scrollEnabled = NO;
         
     }
+    
 }
 
 - (void)setTitleColor:(UIColor *)titleColor {
@@ -210,29 +223,6 @@
     
 }
 
-//- (void)nextLabel {
-//    self.page ++;
-//    
-//    if (self.page == self.titleNewArray.count) {
-//        
-//        [self.ccpScrollView setContentOffset:CGPointMake(0, 0) animated:NO];
-//        
-//        self.page = 1;
-//        
-//    }
-//    //  滚动scrollview
-//    CGFloat x = self.page  * self.ccpScrollView.frame.size.height;
-//    
-//    [self.ccpScrollView setContentOffset:CGPointMake(0, x) animated:YES];
-//    
-//}
-//
-//// scrollview滚动的时候调用
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    
-//    self.page = scrollView.contentOffset.y / self.labelH;
-//    
-//}
 
 // 开始拖拽的时候调用
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -247,7 +237,14 @@
 
 - (void)addTimer{
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextLabel) userInfo:nil repeats:YES];
+    /*
+     scheduledTimerWithTimeInterval:  滑动视图的时候timer会停止
+     这个方法会默认把Timer以NSDefaultRunLoopMode添加到主Runloop上，而当你滑tableView的时候，就不是NSDefaultRunLoopMode了，这样，你的timer就会停了。
+     self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextLabel) userInfo:nil repeats:YES];
+     */
+    
+    self.timer = [NSTimer timerWithTimeInterval:3.0 target:self selector:@selector(nextLabel) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)removeTimer {
