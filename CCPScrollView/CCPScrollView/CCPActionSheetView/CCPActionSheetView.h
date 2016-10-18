@@ -33,10 +33,12 @@ typedef enum viewAnimateDirection {
 
 @property (nonatomic,assign) BOOL isBGClose;
 
+//微信样式底部弹窗
 - (instancetype)initWithActionSheetArray:(NSArray *)indexTextArray;
 
 - (void)cellDidSelectBlock:(cellDidSelectBlock) cellDidSelectBlock;
 
+//自定义的弹窗视图
 - (instancetype) initWithAlertView:(UIView *)alertView;
 
 - (void) closeAlertView:(closeAlertviewBlock) closeAlertviewBlock;
