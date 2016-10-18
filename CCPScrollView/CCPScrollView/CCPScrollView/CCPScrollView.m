@@ -1,9 +1,7 @@
 //
 //  CCPScrollView.m
-//  lunbo
-//
-//  Created by CCP on 16/9/27.
-//  Copyright © 2016年 CCP. All rights reserved.
+//  Created by C CP on 16/9/27.
+//  Copyright © 2016年 C CP. All rights reserved.
 //
 
 #import "CCPScrollView.h"
