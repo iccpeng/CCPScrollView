@@ -41,7 +41,7 @@ label即数据为5时，无动画（一定是无动画效果）切换到第一�
 /**
  *  block回调
  */
-@property (nonatomic,copy)void(^clickLabelBlock)(NSInteger index);
+@property (nonatomic,copy)void(^clickLabelBlock)(NSInteger index,NSString *titleString);
 ```
 ```
 /**
@@ -97,9 +97,9 @@ label即数据为5时，无动画（一定是无动画效果）切换到第一�
     
     ccpView.BGColor = [UIColor purpleColor];
     
-    [ccpView clickTitleLabel:^(NSInteger index) {
+    [ccpView clickTitleLabel:^(NSInteger index,NSString *titleString) {
         
-     NSLog(@"%ld",index);
+     NSLog(@"%ld---%@",index,titleString);
 
     }];
     
