@@ -6,7 +6,7 @@
 
 ### DEMO GIF：
 
-![Image text]( https://github.com/IMCCP/CCPScrollView/blob/master/CCPScrollView/CCPScrollView/scrollView.gif)
+![Image text](http://upload-images.jianshu.io/upload_images/1764698-5824042391011fb4.gif?imageMogr2/auto-orient/strip)
 
 ### DEMO 描述：
 ```
