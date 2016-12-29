@@ -101,12 +101,17 @@
     self.labelH = labelH;
     CGFloat labelX = 0;
     
-    //防止重复赋值数据叠加
-    for (id label in self.ccpScrollView.subviews) {
+//    //防止重复赋值数据叠加
+//    for (id label in self.ccpScrollView.subviews) {
+//        
+//        [label removeFromSuperview];
+//        
+//    }
+    
+    [self.ccpScrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        [label removeFromSuperview];
-        
-    }
+        [obj removeFromSuperview];
+    }];
     
     for (int i = 0; i < objArray.count; i++) {
         
@@ -146,7 +151,7 @@
             
         }
         
-        self.clickLabelBlock(tag,self.titleArray[tag - 100]);
+        self.clickLabelBlock(tag - 100,self.titleArray[tag - 100]);
         
     }
     
