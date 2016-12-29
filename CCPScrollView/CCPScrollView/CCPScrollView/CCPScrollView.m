@@ -210,7 +210,7 @@
     [self.ccpScrollView setContentOffset:oldPoint animated:YES];
     
 }
-//当图片滚动时调用scrollView的代理方法
+//当滚动时调用scrollView的代理方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     if (self.ccpScrollView.contentOffset.y == self.ccpScrollView.frame.size.height*(self.titleArray.count )) {

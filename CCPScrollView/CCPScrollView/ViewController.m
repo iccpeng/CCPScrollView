@@ -28,9 +28,7 @@
 
     /**
      
-     最新DEMO下载链接：https://github.com/IMCCP/CCPScrollView
-     
-     首先感谢您的 Star，如果在使用中您有任何问题，可以在 github issue,我会尽自己能力给您答复。
+     DEMO下载链接：https://github.com/IMCCP/CCPScrollView
      
      */
     
