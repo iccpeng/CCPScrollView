@@ -1,13 +1,6 @@
 # CCPScrollView
 
 #### 文字无限轮播,适用于广播消息的上下无限轮播展示。
-
-#### 首先感谢您的 Star，如果在使用中您有任何问题，可以在 github issue,我会尽自己能力给您答复。
-
-### DEMO GIF：
-
-![Image text](http://upload-images.jianshu.io/upload_images/1764698-5824042391011fb4.gif?imageMogr2/auto-orient/strip)
-
 ### DEMO 描述：
 ```
 通过使用 UILabel 与 UIScrollView 来实现轮播效果。
